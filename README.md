@@ -1,7 +1,7 @@
 # 连接PostgreSQL
 
 ```python
-from pgman.connector import PostgreSQL
+from pgman import PostgreSQL
 
 pg = PostgreSQL(db="test", user="wauo", password="123456")
 
