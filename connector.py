@@ -170,3 +170,5 @@ class PostgreSQL:
 
         if _ := new % once:
             todb()
+
+        logger.info("{} | 添加数据完成".format(table))
