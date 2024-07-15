@@ -16,7 +16,7 @@ def getfv(data: dict | list) -> tuple:
     fs = []
     vs = []
     for k in item.keys():
-        fs.append('{}'.format(k))
+        fs.append('"{}"'.format(k))
         vs.append('%s')
     fileds = ', '.join(fs)
     values = ', '.join(vs)
