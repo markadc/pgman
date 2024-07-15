@@ -20,7 +20,11 @@ class Response:
         if query_all is None:
             result = None
         else:
-            result = [dict(v) for v in cur.fetchall()] if query_all else dict(cur.fetchone())
+            if query_all:
+                result = [dict(v) for v in cur.fetchall()]
+            else:
+                one = cur.fetchone()
+                result = dict(one) if one else one
         self.status = 1
         self.affect = cur.rowcount
         self.result = result
