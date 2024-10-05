@@ -160,6 +160,7 @@ class PostgreSQL:
                 'address': faker.address(),
                 'mark': faker.random_letter()
             }
+            one["salary"] = one["salary"] if one["salary"] > 3000 else 3000
             return one
 
         def todb():
