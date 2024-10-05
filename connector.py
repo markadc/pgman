@@ -155,7 +155,7 @@ class PostgreSQL:
                 'phone': faker.phone_number(),
                 'ssn': faker.ssn(),
                 'job': faker.job(),
-                'salary': faker.random_number(digits=4),
+                'salary': faker.random_number(digits=4) // 500 * 500 + 500,
                 'company': faker.company(),
                 'address': faker.address(),
                 'mark': faker.random_letter()
